@@ -9,7 +9,7 @@ pipeline {
       stages {
           stage("Hello") {
                 steps {
-                    echo "My variable is ${myVariable.toUppercase()}"
+                    echo "My variable is ${myVariable^^}"
                     sh '''
                       npm install;
                       echo "Multi line script";
