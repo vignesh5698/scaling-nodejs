@@ -6,6 +6,7 @@ pipeline {
                 steps {
                     echo "My variable is ${myVariable}"
                     sh '''
+                      npm install;
                       echo "Multi line script";
                       ls -la;
                     '''
