@@ -4,7 +4,7 @@ if(myVariable) {
 } else {
       myVariable = "Haha....I am FASLSEEE"
 }
-def myVariable2 = ${myVariable}.toUpperCase()
+def myVariable2 = myVariable.toUpperCase()
 pipeline {
       agent any
       stages {
