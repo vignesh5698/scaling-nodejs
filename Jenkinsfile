@@ -8,8 +8,8 @@ pipeline {
       agent any
       stages {
           stage("Hello") {
+                myVariable = myVariable.toUpperCase()
                 steps {
-                      myVariable = myVariable.toUpperCase()
                       echo "My variable is ${myVariable}"
                     sh '''
                       npm install;
