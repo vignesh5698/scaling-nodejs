@@ -9,7 +9,7 @@ pipeline {
       stages {
           stage("Hello") {
                 steps {
-                    echo "My variable is ${myVariable^^}"
+                    echo "My variable is ${$first_param^^}"
                     sh '''
                       npm install;
                       echo "Multi line script";
