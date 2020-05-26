@@ -20,7 +20,7 @@ if (cluster.isMaster) {
     res.end(`Hello, this is process: ${process.pid}`);
 
     if(req.url == '/kill') {
-      process.exit();
+      process.exit();   //  Dont use in PRODUCTION server
     } else {
       console.log('This is worker process/....', process.pid);
     }
