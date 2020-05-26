@@ -1,4 +1,9 @@
 def myVariable = "$first_param"
+if(myVariable) {
+      myVariable = "Haha....I am TRUE"
+} else {
+      myVariable = "Haha....I am FASLSEEE"
+}
 pipeline {
       agent any
       stages {
