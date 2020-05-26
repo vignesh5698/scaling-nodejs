@@ -4,12 +4,12 @@ if(myVariable) {
 } else {
       myVariable = "Haha....I am FASLSEEE"
 }
+def myVariable2 = ${myVariable}.toUpperCase()
 pipeline {
       agent any
       stages {
           stage("Hello") {
-                def myVariable2 = ${myVariable}.toUpperCase()
-                script {
+                steps {
                       echo "My variable is ${myVariable2}"
                     sh '''
                       npm install;
@@ -20,7 +20,7 @@ pipeline {
           }
           stage("Param Values") {
                 steps {
-                    echo "This is Param ONE : $first_param";
+                      echo "This is Param ONE : ${myVariable}";
                 }
           }
       }
